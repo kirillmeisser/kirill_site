@@ -183,6 +183,7 @@ footer {
     .aboutme-thumbnail,
     .aboutme-description {
         width: 100%; /* Make each section take full width */
+        margin: 2% 2% 2% 2%;
     }
 }
 
@@ -278,15 +279,18 @@ img {
 @media (max-width: 1024px) {
     .comment-entry {
         flex-direction: column;
-        padding: 5% 5%;
+        padding: 5% 3%;
     }
 
     .comment-thumbnail-left,
     .comment-description-left,
+    .thumbnail-left,
     .comment-thumbnail-right,
-    .comment-description-right {
-        width: 100%; /* Make each section take full width */
+    .comment-description-right,
+    .thumbnail-right {
+        width: 95%; /* Make each section take full width */
         justify-content: center;
+        margin: 2% 2% 2% 2%;
     }
 }
 
