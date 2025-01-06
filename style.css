@@ -39,7 +39,7 @@ h4 {
     background-color: transparent;
 }
 
-li, a, p, button {
+li, a, p {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 20px;
@@ -47,11 +47,19 @@ li, a, p, button {
     text-decoration: none;
 }
 
+/* Adjustments for mobile phones */
+@media (max-width: 768px) {
+    li, a, p {
+        font-size: 16px; /* Adjust size for readability */
+    }
+}
+
 header {
     position: sticky;
     top: 0;
     z-index: 1000;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
@@ -60,8 +68,16 @@ header {
     border-bottom-width: 1px;
 }
 
+/* Adjustments for mobile phones */
+@media (max-width: 768px) {
+    .nav__links li.hide-on-small {
+        display: none; /* Hides the element */
+    }
+}
+
 footer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
@@ -84,6 +100,7 @@ footer {
 
 .nav__links li {
     display: inline-block;
+    flex-wrap: wrap;
     padding: 0px 20px;
 }
 
@@ -111,21 +128,9 @@ footer {
     color: #0088a9;
 }
 
-button {
-    padding: 9px 25px;
-    background-color: rgba(0,136,169,1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-
-button:hover {
-    background-color: rgba(0,136,169,0.8);
-}
-
 .title-div {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 
@@ -133,12 +138,14 @@ button:hover {
 
 .flex-container {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     margin: 10%;
 }
 
 .aboutme-entry {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     width: 100%;
     padding: 5% 10% 5% 10%;
@@ -147,37 +154,56 @@ button:hover {
     border-bottom-width: 1px;
 }
 
+.aboutme-thumbnail {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    width: 40%;
+    background-color: transparent;
+    margin: 2% 2% 2% 0%;
+}
+
+.aboutme-description {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 50%;
+    background-color: transparent;
+    margin: 2% 0% 2% 2%;
+}
+
+/* Adjustments for mobile phones and tablets */
+@media (max-width: 1024px) {
+    .aboutme-entry {
+        flex-direction: column; /* Stack items vertically */
+        padding: 5% 5%; /* Adjust padding for smaller screens */
+    }
+
+    .aboutme-thumbnail,
+    .aboutme-description {
+        width: 100%; /* Make each section take full width */
+    }
+}
+
 .contactme-entry {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     flex-direction: column;
     width: 100%;
     padding: 5% 10% 5% 10%;
 }
 
-.aboutme-thumbnail {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
-    background-color: transparent;
-    padding: 2% 2% 2% 0%;
-}
-
-.aboutme-description {
-    display: flex;
-    align-items: center;
-    width: 60%;
-    background-color: transparent;
-    padding: 2% 0% 2% 2%;
-}
-
 .comment-entry {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     width: 100%;
     padding: 5% 15% 5% 15%;
-    /* border: solid 1px #edf0f1; */
+    border-bottom-style: solid;
+    border-bottom-color: #edf0f1;
+    border-bottom-width: 1px;
 }
 
 .comment-entry:hover {
@@ -188,15 +214,17 @@ button:hover {
 
 .comment-thumbnail-left {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
-    align-items: center;
+    align-items: baseline;
     width: 40%;
     background-color: transparent;
-    padding: 2% 2% 2% 0%;
+    margin: 2% 2% 2% 0%;
 }
 
 .thumbnail-left {
     display:flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     background-color: transparent;
     height: 70%
@@ -205,44 +233,71 @@ button:hover {
 
 .comment-thumbnail-right {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
-    align-items: center;
+    align-items: baseline;
     width: 40%;
     background-color: transparent;
-    padding: 2% 0% 2% 2%;
+    margin: 2% 0% 2% 2%;
 }
 
 .thumbnail-right {
     display:flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
     background-color: transparent;
     height: 70%
     
 }
 
-.thumbnail img {
+img {
     max-width: 100%;
-    max-height: 100%;
+    min-width: 50px; /* Example minimum width */
+    min-height: 50px; /* Example minimum height */
+    object-fit: cover;
 }
 
 .comment-description-left {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    width: 60%;
+    width: 50%;
     background-color: transparent;
-    padding: 2% 0% 2% 2%;
+    margin: 2% 0% 2% 2%;
 }
 
 .comment-description-right {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    width: 60%;
+    width: 50%;
     background-color: transparent;
-    padding: 2% 2% 2% 0%;
+    margin: 2% 2% 2% 0%;
+}
+
+@media (max-width: 1024px) {
+    .comment-entry {
+        flex-direction: column;
+        padding: 5% 5%;
+    }
+
+    .comment-thumbnail-left,
+    .comment-description-left,
+    .comment-thumbnail-right,
+    .comment-description-right {
+        width: 100%; /* Make each section take full width */
+        justify-content: center;
+    }
 }
 
 .description {
     background-color: transparent;
+}
+
+@media (max-width: 1024px) {
+    .description {
+        padding: 5% 5%;
+    }
 }
 
 .space-maker {
