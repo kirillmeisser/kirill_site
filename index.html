@@ -1,160 +1,154 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
     <head>
-        <title> Kirill Meisser</title>
+        <meta charset="UTF-8">
+        <title>Kirill Meisser</title>
         <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
+        <script src="script.js" defer></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="A little about myself">
+        <meta name="description" content="Kirill Meisser — a little about myself, my projects and interests.">
     </head>
-    
+
     <body>
 
         <header class="navbar">
-            <div class="title-div">
-                <div>
-                    <a href="./">Kirill Meisser</a>
-                </div>
-            </div>
-
-            <nav>
-                <ul class="nav__links">
-                        <li class="hide-on-small">Hi there stranger!</li>
-                        <li><a href="./contact">Get in touch</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <div class="aboutme-entry">
-            <div class="aboutme-thumbnail">
-                <div class="thumbnail-left">
-                    <img class="thumbnail-img" src="assets/my_pic.png", alt="logo">
-                </div>  
-            </div>
-            <div class="aboutme-description">
-                <div class="description">
-                    <h2> About me</h2>
-                    <div class="space-maker"></div>
-                    <h3>My name is Kirill Meisser, I am 27 years old and of Swiss nationality. I was born in the cold yet beautiful city of St. Petersburg, Russia. During the years I have moved three times, once to Mallorca, Spain, then to Lugano, Switzerland and lastly to Zürich where I currently reside. This enabled me to learn different languages and cultures and to swiftly adapt to new environments. Since I was a child I had a great passion for technology and mathematics. I am a driven person, that is cheerful and likes to have a good laugh, while always aiming to do my best on anything that I am currently working on.</h3>
-                </div>
-            </div>
-        </div>
-
-        <header class="navbar">
-            <div class="title-div">
-                <div>
-                    <a href="#my-projects-div">My projects</a>
-                </div>
+            <div class="container">
+                <a href="./" class="brand">Kirill Meisser</a>
+                <nav class="nav-links">
+                    <span class="nav-greeting">Hi there, stranger!</span>
+                </nav>
             </div>
         </header>
 
-        <div id="my-projects-div"></div>
+        <!-- Hero -->
+        <section class="hero-wrap">
+            <div class="container hero">
+                <div class="hero-copy">
+                    <span class="hero-eyebrow">👋 Based in Zürich, Switzerland</span>
+                    <h1>Hi, I'm Kirill —<br><span class="accent">building with AI &amp; vision.</span></h1>
+                    <p class="hero-sub">A driven engineer with a lifelong passion for technology and mathematics, turning computer-vision research into tools people actually use.</p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View my work</a>
+                        <a href="./contact" class="btn btn-ghost">Get in touch</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <img class="hero-photo" src="assets/my_pic.png" alt="Portrait of Kirill Meisser">
+                </div>
+            </div>
+        </section>
 
-        <div class="comment-entry">
-            <div class="comment-thumbnail-left">
-                <div class="thumbnail-left">
-                    <img class="thumbnail-img" src="assets/rivet.gif", alt="logo">
-                </div>  
-            </div>
-            <div class="comment-description-left">
-                <div class="description">
-                    <h2>Automated Rivet Analysis</h2>
-                    <div class="space-maker"></div>
-                    <h3>Created an algorithm that given the cross section of a rivet, calculates 10 different measurement overlays. This analysis is mostly used in the car body construction and helps determine whether the rivet connection is stable or unstable. The algorithm has been deployed at several car manufacturers and has been used to partially automate the analysis. The estimated work flow speed-up is around 60x. </h3>
+        <!-- About -->
+        <section id="about">
+            <div class="container">
+                <span class="eyebrow">About me</span>
+                <h2 class="section-title">A little about myself</h2>
+                <div class="about-card">
+                    <p>My name is Kirill Meisser, I am a computer vision engineer and cofounder of <a href="https://www.sherlockrobotics.com">Sherlock</a>. I have dual citizenship (Swiss and Russian) and was born in the cold yet beautiful city of St. Petersburg, Russia. Over the years I have moved three times — first to Mallorca, Spain, then to Lugano, Switzerland, and lastly to Zürich, where I currently reside.</p>
+                    <p>These moves let me learn different languages and cultures and to swiftly adapt to new environments. Since I was a child I've had a great passion for technology and mathematics. I'm a driven, cheerful person who likes to have a good laugh, while always aiming to do my best at whatever I'm working on.</p>
                 </div>
             </div>
-        </div>
-        
-        <div class="comment-entry">
-            <div class="comment-description-right">
-                <div class="description">
-                    <h2>Clinching Connection Analysis</h2>
-                    <div class="space-maker"></div>
-                    <h3>A similar algorithm but this time we are dealing with the clinching process. Given an image of the cross section the algorithm outputs 11 measurements. These help professionals decide whether the connection is stable and whether the production satisfies the quality controls.</h3>
-                </div>
-            </div>
-            <div class="comment-thumbnail-right">
-                <div class="thumbnail-right">
-                    <img class="thumbnail-img" src="assets/clinch.gif", alt="logo">
-                </div>  
-            </div>
-        </div>
-        
-        <div class="comment-entry">
-            <div class="comment-thumbnail-left">
-                <div class="thumbnail-left">
-                    <img class="thumbnail-img" src="assets/t_weld.gif", alt="logo">
-                </div>  
-            </div>
-            <div class="comment-description-left">
-                <div class="description">
-                    <h2>Welding Analysis</h2>
-                    <div class="space-maker"></div>
-                    <h3>A suite of models developed for the analysis of different weld types. The complexity here being the sheer number of weld variations there are.</h3>
-                </div>
-            </div>
-        </div>
+        </section>
 
-        <div class="comment-entry">
-            <div class="comment-description-right">
-                <div class="description">
-                    <h2>Wound Measurement</h2>
-                    <div class="space-maker"></div>
-                    <h3>A robust measurement tool that measures the width, height and area of skin wounds. The tool allows for an accurate tracking of the healing process and aids medical professionals in determining the most adecuate treatment.</h3>
-                </div>
-            </div>
-            <div class="comment-thumbnail-right">
-                <div class="thumbnail-right">
-                    <img class="thumbnail-img" src="assets/wound.gif", alt="logo">
-                </div>  
-            </div>
-        </div>
-                
-        <div class="comment-entry">
-            <div class="comment-thumbnail-left">
-                <div class="thumbnail-left">
-                    <img class="thumbnail-img" src="assets/anonymize_face.gif", alt="logo">
-                </div>  
-            </div>
-            <div class="comment-description-left">
-                <div class="description">
-                    <h2>Face Anonymization</h2>
-                    <div class="space-maker"></div>
-                    <h3>Developed an anonymization tool that reliably detects faces in images and occludes the eye region. In doing so we have minimaly invasive anonymization. The tool has been trained on a dataset containing people in different poses and different degrees of occlusion. Furthermore, the training set contained images of people of different ethnicities to combat biases and class imbalance.</h3>
-                </div>
-            </div>
-        </div>
-        
-        <div class="comment-entry">
-            <div class="comment-description-right">
-                <div class="description">
-                    <h2>Metal Structure Analysis</h2>
-                    <div class="space-maker"></div>
-                    <h3>Created a number of models that analysed some of the properties of metal structures, such as phase fraction, grain size and porosity. These help us better understand the attributes of the metal and whether they satisfy the requirements for our application.</h3>
-                </div>
-            </div>
-            <div class="comment-thumbnail-right">
-                <div class="thumbnail-right">
-                    <img class="thumbnail-img" src="assets/phase_fraction.png", alt="logo">
-                </div>  
-            </div>
-        </div>
-        
-        <header class="navbar">
-            <div class="title-div">
-                <div>
-                    <a href="#interests-div">Interests</a>
-                </div>
-            </div>
-        </header>
+        <!-- Projects -->
+        <section id="projects">
+            <div class="container">
+                <span class="eyebrow">Portfolio</span>
+                <h2 class="section-title">My projects</h2>
+                <p class="section-intro">A selection of computer-vision and deep-learning systems I've built across manufacturing, medicine and privacy.</p>
 
-        <div class="comment-entry">
-            <div class="description"><h3>Travelling, Cars, Books, Gym, Guitar, Video Games & Stock Market</h3></div>
-        </div>
-            
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-media">
+                            <img src="assets/rivet.gif" alt="Automated rivet analysis">
+                        </div>
+                        <div class="project-body">
+                            <h3>Automated Rivet Analysis</h3>
+                            <p>An algorithm that, given the cross-section of a rivet, computes 10 measurement overlays used in car-body construction to judge connection stability. Deployed at several car manufacturers with an estimated 60× workflow speed-up.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-media">
+                            <img src="assets/clinch.gif" alt="Clinching connection analysis">
+                        </div>
+                        <div class="project-body">
+                            <h3>Clinching Connection Analysis</h3>
+                            <p>A related algorithm for the clinching process. From a cross-section image it outputs 11 measurements that help professionals decide whether a connection is stable and whether production meets quality controls.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-media">
+                            <img src="assets/t_weld.gif" alt="Welding analysis">
+                        </div>
+                        <div class="project-body">
+                            <h3>Welding Analysis</h3>
+                            <p>A suite of models for analysing different weld types — the challenge being the sheer number of weld variations that need to be recognised and measured reliably.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-media">
+                            <img src="assets/anonymize_face.gif" alt="Face anonymization">
+                        </div>
+                        <div class="project-body">
+                            <h3>Face Anonymization</h3>
+                            <p>A tool that reliably detects faces and occludes the eye region for minimally invasive anonymization. Trained on diverse poses, occlusions and ethnicities to combat bias and class imbalance.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-media">
+                            <img src="assets/phase_fraction.png" alt="Metal structure analysis">
+                        </div>
+                        <div class="project-body">
+                            <h3>Metal Structure Analysis</h3>
+                            <p>A set of models analysing properties of metal structures — phase fraction, grain size and porosity — to better understand the material and verify it meets the requirements for our application.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interests -->
+        <section id="interests">
+            <div class="container">
+                <span class="eyebrow">Outside of work</span>
+                <h2 class="section-title">Interests</h2>
+                <div class="interests-tags">
+                    <span class="tag">Travelling</span>
+                    <span class="tag">Cars</span>
+                    <span class="tag">Books</span>
+                    <span class="tag">Gym</span>
+                    <span class="tag">Guitar</span>
+                    <span class="tag">Video Games</span>
+                    <span class="tag">Stock Market</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section id="cta">
+            <div class="container">
+                <div class="cta-card">
+                    <h2>Interested? Let's connect.</h2>
+                    <p>Whether it's a project, a collaboration or just a good chat, I'm always happy to hear from you.</p>
+                    <a href="./contact" class="btn btn-primary">Get in touch</a>
+                </div>
+            </div>
+        </section>
+
         <footer>
-            <h3>&copy; 2024 Kirill Meisser. All rights reserved.</h3>
+            <div class="container">
+                <p>&copy; 2026 Kirill Meisser. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="./contact">Contact</a>
+                </div>
+            </div>
         </footer>
-    </body>    
+
+    </body>
 </html>
